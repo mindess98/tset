@@ -1,0 +1,3 @@
+<div *ngFor="let room of rooms" (click)="selected.emit(room)">
+	<pre>{{ room | json }}</pre>
+</div>

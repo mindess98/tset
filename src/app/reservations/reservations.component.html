@@ -1,3 +1,2 @@
-<div *ngFor="let reservation of reservations">
-	<pre>{{reservation | json}}</pre>
-</div>
+<app-reservations-list [reservations]="reservations"
+					   (selected)="selectedReservation($event)"></app-reservations-list>

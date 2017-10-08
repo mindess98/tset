@@ -18,4 +18,8 @@ export class ReservationsComponent implements OnInit {
 		this.reservations = this.reservationsService.getAll();
 	}
 
+	selectedReservation(reservation: Reservation) {
+		console.log(reservation);
+	}
+
 }

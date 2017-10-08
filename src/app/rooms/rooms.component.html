@@ -1,0 +1,7 @@
+<app-rooms-list [rooms]="rooms"
+				(selected)="selectRoom($event)"></app-rooms-list>
+<hr>
+<app-rooms-detail [selectedRoom]="selectedRoom"></app-rooms-detail>
+<hr>
+<app-rooms-selection [rooms]="rooms"
+					 (add)="addRoom($event)"></app-rooms-selection>

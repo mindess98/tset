@@ -1,0 +1,4 @@
+<div *ngFor="let reservation of reservations" 
+									(click)="selected.emit(reservation)">
+	<pre>{{ reservation | json }}</pre>
+</div>
