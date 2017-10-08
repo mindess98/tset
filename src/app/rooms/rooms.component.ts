@@ -8,10 +8,13 @@ import { RoomsService, Room } from '../shared/index';
 export class RoomsComponent implements OnInit {
 	rooms: Array<Room>;
 	selectedRoom: Room;
+	addedRooms: Array<Room>;
 
   	constructor(
   		private roomsService: RoomsService
-  		) { }
+  		) { 
+  		this.addedRooms = [];
+  	}
 
   	ngOnInit() {
   		this.rooms = this.roomsService.getAll();
@@ -22,6 +25,9 @@ export class RoomsComponent implements OnInit {
 	}
 
 	addRoom(room: Room) {
-		console.log(room);
+		var index = this.rooms.indexOf(room);
+		this.rooms.splice(index, 1);
+		this.addedRooms.push(room);
+		console.log(this.addedRooms);
 	}
 }
