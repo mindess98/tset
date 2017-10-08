@@ -1,0 +1,15 @@
+<app-roomtypes-selection [roomTypes]="roomTypesService.getAll()" 
+						 (selected)="yell($event)"
+						 >
+
+</app-roomtypes-selection>
+<pre>{{selectedRoomType | json}}</pre>
+<hr>
+<app-roomtypes-list [roomTypes]="roomTypesService.getAll()"
+					(highlighted)="lley($event)">
+
+</app-roomtypes-list>
+<hr>
+<app-roomtypes-detail [highlightedRoomType]="highlightedRoomType">
+</app-roomtypes-detail>
+

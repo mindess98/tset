@@ -1,0 +1,19 @@
+
+<div *ngIf="highlightedRoomType">
+	<input type="text" name="we" [(ngModel)]="highlightedRoomType.name">
+	<input type="text" name="ew" [(ngModel)]="highlightedRoomType.starValue">
+	<button (click)="saved.emit(highlightedRoomType)">Save</button>
+	<button (click)="deleted.emit(highlightedRoomType)">Delete</button>
+	<button (click)="canceled.emit()">Cancel</button>
+	<pre>
+		{{highlightedRoomType | json}}
+	</pre>
+</div>
+
+<div *ngIf="!highlightedRoomType">
+	<input type="text" name="we" >
+	<input type="text" name="ew" >
+	<button (click)="saved.emit(highlightedRoomType)">Save</button>
+	<button (click)="canceled.emit()">Cancel</button>
+
+</div>

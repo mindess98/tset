@@ -1,0 +1,3 @@
+<div *ngFor="let roomType of roomTypes" (click)="highlighted.emit(roomType)">
+	<pre>{{roomType | json}}</pre>
+</div>

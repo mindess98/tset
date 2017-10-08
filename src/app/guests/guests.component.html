@@ -1,0 +1,8 @@
+<app-guests-list [_guests]="guests"
+				 (selected)="selectGuest($event)"					
+></app-guests-list>
+<hr>
+<app-guests-detail [SelectedGuest]="selectedGuest"
+				   (canceled)="cancelUpdate($event)"
+				   (saved)="updateGuest($event)"
+				   (deleted)="deleteGuest($event)"></app-guests-detail>

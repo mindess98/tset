@@ -1,0 +1,5 @@
+<select>
+	<option *ngFor="let roomtype of _roomTypes" value="roomtype.id" (click)="selected.emit(roomtype)">
+		{{roomtype.name}}
+	</option>
+</select>

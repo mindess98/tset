@@ -1,0 +1,3 @@
+<div *ngFor="let guest of _guests" (click)="selected.emit(guest)">
+	<pre>{{guest | json}}</pre>
+</div>
